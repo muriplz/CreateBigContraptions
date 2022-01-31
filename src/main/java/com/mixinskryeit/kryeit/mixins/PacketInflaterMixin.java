@@ -1,4 +1,4 @@
-package com.example.examplemod.mixins;
+package com.mixinskryeit.kryeit.mixins;
 
 import net.minecraft.network.CompressionDecoder;
 import org.spongepowered.asm.mixin.Mixin;
