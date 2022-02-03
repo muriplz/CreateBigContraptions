@@ -2,5 +2,5 @@ package com.nbtsizefix.kryeit;
 
 import net.minecraftforge.fml.common.Mod;
 
-@Mod("mixinskryeit")
+@Mod("nbtsizefix")
 public class NBTsizeFIX {}
