@@ -1,4 +1,4 @@
-package com.mixinskryeit.kryeit.mixins;
+package com.nbtsizefix.kryeit.mixins;
 
 import net.minecraft.network.protocol.game.ServerboundCustomPayloadPacket;
 import org.spongepowered.asm.mixin.Mixin;
