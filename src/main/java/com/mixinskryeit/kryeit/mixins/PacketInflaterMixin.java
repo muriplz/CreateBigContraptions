@@ -1,14 +1,16 @@
 package com.mixinskryeit.kryeit.mixins;
 
-import net.minecraft.network.CompressionDecoder;
+import net.minecraft.network.FriendlyByteBuf;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
-@Mixin(CompressionDecoder.class)
+
+@Mixin(FriendlyByteBuf.class)
 public class PacketInflaterMixin {
-    @ModifyConstant(method = "decode",constant = @Constant(intValue = 2097152))
-    private int newConstant(int old) {
-        return 2000000000;
+
+    @ModifyConstant(method = "readNbt()Lnet/minecraft/nbt/CompoundTag;", constant = @Constant(longValue = 2097152L))
+    private long xlPackets(long constant) {
+        return 10000000L;
     }
 }
