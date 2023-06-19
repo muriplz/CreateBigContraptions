@@ -1,4 +1,4 @@
-package com.nbtsizefix.kryeit.mixins;
+package com.kryeit.mixins;
 
 import net.minecraft.network.FriendlyByteBuf;
 import org.spongepowered.asm.mixin.Mixin;
@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 public class PacketInflaterMixin {
 
     @ModifyConstant(method = "readNbt()Lnet/minecraft/nbt/CompoundTag;", constant = @Constant(longValue = 2097152L))
-    private long xlPackets(long constant) {
+    private long bigPackets(long constant) {
         return 10000000L;
     }
 }

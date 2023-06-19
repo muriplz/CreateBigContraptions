@@ -1,4 +1,4 @@
-package com.nbtsizefix.kryeit.mixins;
+package com.kryeit.mixins;
 
 import net.minecraft.network.protocol.game.ServerboundCustomPayloadPacket;
 import org.spongepowered.asm.mixin.Mixin;
@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 public class SCustomPayloadPacketMixin {
 
     @ModifyConstant(method = {"<clinit>","getData"},constant = @Constant(intValue = 1048576))
-    private static int newConstant(int constant) {
+    private static int bigPackets(int constant) {
         return 10000000;
     }
 }

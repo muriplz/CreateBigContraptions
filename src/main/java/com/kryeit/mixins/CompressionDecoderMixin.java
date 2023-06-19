@@ -1,4 +1,4 @@
-package com.nbtsizefix.kryeit.mixins;
+package com.kryeit.mixins;
 
 import net.minecraft.network.CompressionDecoder;
 import org.spongepowered.asm.mixin.Mixin;
